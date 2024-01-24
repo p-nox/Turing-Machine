@@ -50,6 +50,10 @@ The main functionalities include:
   
 ## Build and Run
 
+## Notes
+
+  * The simulator allows users to interactively input strings and simulate the Turing Machine behavior.
+  * Ensure that the input file adheres to the specified format.
 
 
 Feel free to explore, contribute, and adapt the code to suit your needs.
