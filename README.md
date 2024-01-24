@@ -7,7 +7,6 @@ This repository houses a C implementation of a Turing Machine simulator, a compu
 2. [Features](#features)
 3. [File Structure](#file-structure)
 4. [Getting Started](#getting-started)
-5. [Build and Run](#build-and-run)
 
 ## Overview
 
@@ -48,12 +47,7 @@ The main functionalities include:
 
    3. **Word Processing:** The program processes each input word using the specified transitions and determines whether the word is accepted or rejected.
   
-## Build and Run
-
 ## Notes
 
   * The simulator allows users to interactively input strings and simulate the Turing Machine behavior.
   * Ensure that the input file adheres to the specified format.
-
-
-Feel free to explore, contribute, and adapt the code to suit your needs.
