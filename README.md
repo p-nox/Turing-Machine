@@ -1,24 +1,27 @@
 # Turing Machine Simulator in C
-This repository houses a C implementation of a Turing Machine simulator, a computational model that can simulate the logic of a simple computing device. The simulator reads transition rules and machine configurations from an input file, processes input strings, and outputs the final results, including the machine's state 
 
-## Table of Contents
+## Overview
 
-1. [Overview](#overview)
-2. [Features](#features)
-3. [File Structure](#file-structure)
-4. [Getting Started](#getting-started)
+This project implements a simple **Turing Machine simulator** in C.  
+The simulator reads machine transition rules from a file and evaluates whether an input string is accepted or not based on the defined transitions and header movement.
+
+---
+
+## Features
+
+- Reads Turing Machine configuration (states and transitions) from a file
+- Supports movement of the head left (`L`) or right (`R`)
+- Can write symbols on the tape
+- Accepts inputs interactively from the user
+- Simulates the Turing Machine execution step-by-step
+- Detects acceptance (final state `-1`) or halting without acceptance
+- Prints final tape state and head position
 
 ## Overview
 
 The Turing Machine Simulator is a C program that simulates a simple Turing machine based on the provided transition rules. The Turing machine processes input strings and manipulates them on a tape according to the specified transitions. Users can interactively input strings and set the initial position of the tape head (header) to observe the machine's behavior.
 
-## Features 
-The main functionalities include:
-  * **Turing Machine Simulation:** The program simulates a Turing machine, which consists of a tape, a tape head, and a set of transition rules.
-  * **Interactive Input:** Users can provide input strings and set the initial position of the tape head before running the simulation.
-  * **Transition Rules:** Transition rules define the behavior of the Turing machine. Each rule consists of a source state, input symbol, command ('R' for right, 'L' for left, or a symbol for read/write), and a target state.
-  *  **Out-of-Bounds Handling:** The program checks for out-of-bounds conditions, preventing the tape head from moving beyond the boundaries of the input string.
-  * **Dynamic Memory Allocation:** The transition rules are stored dynamically, allowing for flexibility in defining Turing machines with varying numbers of states and transitions.
+
 
 ## File Structure
 
@@ -39,15 +42,19 @@ The main functionalities include:
      * **Transition 3 (2aa1):** From state 2, if reading 'a', write 'a', and transition to state 1.
      * **Transition 4 (1##0):** From state 1, if reading '#', write nothing ('#'), and transition to the halt state (state 0).       
 
-## Getting Started
-
-   1. **Input File Specification:** The user is required to provide an input file containing the specifications of the finite automaton. This includes the number of states, initial and final states, and the transitions.
-
-   2. **User Interaction:** After reading the input file, the program prompts the user to input words for the automaton to process. The user can choose to continue or exit after each word.
-
-   3. **Word Processing:** The program processes each input word using the specified transitions and determines whether the word is accepted or rejected.
   
 ## Notes
 
   * The simulator allows users to interactively input strings and simulate the Turing Machine behavior.
   * Ensure that the input file adheres to the specified format.
+
+
+
+---
+
+## Limitations
+
+- No dynamic resizing of the tape
+- Limited error checking (e.g., file format must be correct)
+
+
